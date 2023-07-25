@@ -1,0 +1,18 @@
+.btn {
+	display: inline-block;
+	padding: 1.5rem 1rem;
+	border: 1px solid transparent;
+	color: $clr-dark;
+	&.bg {
+		&--primary {
+			background: $clr-primary;
+			color: $clr-light;
+            border: 1px solid $clr-light;
+		}
+		&--light {
+			background: $clr-light;
+			color: $clr-primary;
+            border: 1px solid $clr-primary;
+		}
+	}
+}
