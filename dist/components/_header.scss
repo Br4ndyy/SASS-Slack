@@ -1,5 +1,19 @@
 .header {
 	background: $clr-primary;
+	position: fixed;
+	width: 100%;
+	.container{
+		transition: 1s ease;
+	}
+	&.white{
+		background: transparent;
+		.container{
+			background: blue;
+			border-radius: 3rem;
+			margin-top: 5rem;
+			transition: 2s ease;
+		}
+	}
 	&__wrapper {
 		display: flex;
 		align-items: center;
@@ -22,7 +36,7 @@
 	}
 	&__nav {
 		position: absolute;
-		background: pink;
+		background:$clr-light;
 		top: 0%;
 		right: -100rem;
 		width: 100%;
@@ -32,7 +46,7 @@
 			width: 15rem;
 			padding: 2rem;
 		}
-		ul {
+		ul.nav {
 			display: flex;
 			flex-direction: column;
 			margin-top: 6rem;
@@ -48,7 +62,26 @@
 					font-weight: 600;
 					i{
 						color: $clr-dark;
+						&.open{
+							transform: rotate(90deg);
+							transition: .5s ease;
+						}
 					}
+				}
+			}
+			ul.drop{
+				margin: 0 3rem;
+				max-height: 0rem;
+				overflow: hidden;
+				transition: .5s ease;
+				li{
+					a{
+						font-size: 1.5rem;
+					}
+				}
+				&.open{
+					max-height: 50rem;
+					transition: .5s ease;
 				}
 			}
 		}
@@ -97,6 +130,7 @@
 			}
 		&.open{
 			span{
+				color: $clr-dark;
 				background-color: $clr-dark;
 				&:first-child{
 					transform: translateY(10px) rotate(225deg);
@@ -115,6 +149,49 @@
 		}
 		&__btn {
 			display: none;
+		}
+	}
+	@include mediaQuery($break-lg){
+		&__nav{
+			display: none;
+		}
+		.branding{
+			ul{
+				display: flex;
+				gap: 2rem;
+				margin-left: 5rem;
+				li{
+					transition: .5s ease;
+					a{
+						color: $clr-light;
+						font-weight: 600;
+						font-size: 1.5rem;
+						display: flex;
+						align-items: center;
+						gap: .5rem;
+						i{
+							font-size: 1rem;
+						}
+					}
+					&:hover{
+						transform: scale(1.1);
+						transition: .5s ease;
+					}
+				}
+			}
+		}
+		&__actions{
+			.toggle__menu{
+				display: none;
+			}
+			&__btn{
+				display: flex;
+				align-items: center;
+				gap: 2rem;
+				a.sign{
+					color: $clr-light;
+				}
+			}
 		}
 	}
 }
