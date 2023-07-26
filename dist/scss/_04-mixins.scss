@@ -9,3 +9,15 @@
     height: $height;
     object-fit: cover;
 }
+
+@mixin centerAll{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin gridEven($cols,$gap){
+    display:grid;
+    grid-template-columns: repeat($cols,1fr);
+    grid-gap:$gap
+}
