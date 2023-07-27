@@ -1,9 +1,9 @@
 .banner {
-	background: $clr-primary;
+	// background: $clr-primary;
 	position: relative;
 	width: 100%;
 	.container {
-		height: 90vh;
+		height: 85vh;
 		.banner__wrapper {
 			margin-top: 10rem;
 			margin-bottom: 1rem;
@@ -24,9 +24,6 @@
 					font-weight: 700;
 					line-height: 5rem;
 					margin-bottom: 1rem;
-					span {
-						color: $clr-yellow;
-					}
 				}
 				&:first-child {
 					font-size: 2rem;
@@ -41,38 +38,26 @@
 					flex-direction: column;
 					gap: 2rem;
 					li:first-child {
-						background-color: $clr-light;
-						text-align: center;
-						padding: 1.5rem 5rem;
-						border-radius: 0.25rem;
 						a {
-							color: $clr-primary;
-							font-size: 1.5rem;
-							font-weight: 600;
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            max-width: 100%;
 						}
 					}
 					li:last-child {
-						background-color: $clr-lblue;
-						border-radius: 0.25rem;
-						font-weight: 600;
-						padding: 2rem 0;
-						display: flex;
-						align-items:center;
-						flex-direction: row-reverse;
-						justify-content: center;
 						position: relative;
 						img {
-							width: 5rem;
+							width: 4.5rem;
 							background: $clr-light;
 							position: absolute;
-							bottom: 1.5;
+							bottom:0.45rem;
 							left: 0.5rem;
-							padding: 1.5rem;
+							padding: 1.4rem;
+                            border-radius: .25rem;
 						}
 						a {
-							color: $clr-light;
-							font-size: 1.5rem;
-							font-weight: 600;
+                            font-size: 1.5rem;
+                            font-weight: 600;
 						}
 					}
 				}
@@ -90,7 +75,6 @@
 					position: relative;
 					@include imgFit(100%, 100%);
 				}
-
 				.banner__content {
 					display: flex;
 					flex-direction: column;
@@ -112,19 +96,18 @@
 						display: flex;
 						flex-direction: row;
 						li:first-child {
-							padding: 1 9rem;
-							display: flex;
-							align-items: center;
 							a {
-								font-size: 1.3rem;
+                                padding: 1.5rem 5rem;
 							}
 						}
 						li:last-child {
-							margin: auto 0;
-							padding: 2rem 5rem;
 							a {
-								font-size: 1.4rem;
-								width: 100%;
+                                padding-top: 1.5rem;
+                                padding-bottom: 1.5rem;
+                                padding-left: 6rem;
+                                padding-right:1rem;
+                                display: flex;
+                                align-items: flex-end;
 							}
 						}
 					}
@@ -262,12 +245,40 @@
 							align-items: center;
 						}
 					}
-				}
-				// .section:nth-child(odd){
-				// }
-				// .section:nth-child(even){
 
-				// }
+                    .section{
+                        &:nth-child(odd){
+                            display: flex;
+                            flex-direction: row;
+                            gap: 15rem;
+                            video{
+                                width: 40rem;
+                            }
+                            .trust__text{
+                                display: flex;
+                                flex-direction: column;
+                            }
+                        }
+                        &:nth-child(even){
+                            video{
+
+                            }
+                            .trust__text{
+                                h2{
+
+                                }
+                                p{
+
+                                }
+                                a{
+                                    i{
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+				}
 			}
 		}
 	}
@@ -282,6 +293,7 @@
 					flex-direction: column;
 					gap: 2rem;
 					text-align: center;
+                    margin-top: 7rem;
 					h2 {
 						font-size: 3rem;
 					}
