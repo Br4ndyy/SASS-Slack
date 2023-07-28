@@ -22,3 +22,10 @@ window.addEventListener("scroll", () => {
         kamote.classList.remove("white");
     }
 });
+
+const modal = document.querySelector('.modal')
+const btnRegion = document.querySelector('.region')
+btnRegion.addEventListener('click',()=>{
+    btnRegion.classList.toggle('active')
+    btnRegion.nextElementSibling.classList.toggle('active')
+})

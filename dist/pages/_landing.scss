@@ -245,7 +245,6 @@
 							align-items: center;
 						}
 					}
-
                     .section{
                         &:nth-child(odd){
                             display: flex;
@@ -360,12 +359,6 @@
 								font-size: 1.5rem;
 								margin-bottom: 1.75rem;
 							}
-							&:last-child {
-								color: gray;
-								font-size: 1.45rem;
-								text-align: center;
-								margin-top: 3rem;
-							}
 						}
 						a {
 							font-size: 1.75rem;
@@ -378,6 +371,105 @@
 						}
 					}
 				}
+				h3 {
+					color: gray;
+					font-size: 1.45rem;
+					text-align: center;
+					margin-top: 3rem;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+	@include mediaQuery($break-lg){
+		.container{
+			.teams__wrapper{
+				.teams__content{
+					.teams__header{
+						h2{
+							font-size: 5rem;
+						}
+						p{
+							margin: 1rem 0;
+						}
+						.btns__header{
+							display: flex;
+							justify-content: center;
+							gap:2rem
+						}
+					}
+					.percent__content{
+						display: flex;
+						flex-direction: row;
+						justify-content: center;
+						gap:18rem;
+						.percent__text{
+							h2{
+								font-size: 6.5rem;
+							}
+						}
+					}
+					.last__section{
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						gap: 4rem;
+						video{
+							@include imgFit(90rem, 400px);
+							border-top-right-radius: 24rem;
+							border-bottom-right-radius: 24rem;
+						}
+						.last__section__text{
+							border-top: none;
+							p{
+								&:nth-child(2){
+									margin-top: 2rem;
+								}
+								&:nth-child(3){
+									margin-bottom: 2rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.accomplish__header{
+	background: $clr-dprimary;
+	height: 60vh;
+	clip-path: ellipse(110% 80% at center top);
+	.accomplish__wrapper{
+		background: $clr-dprimary;
+		h2{
+			font-size: 3rem;
+			color: $clr-light;
+			text-align: center;
+			padding-top: 8rem;
+			padding-left: 3rem;
+			padding-right: 3rem;
+		}
+		.accomplish__btns{
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			margin: 4rem 2rem;
+			a{
+				text-align: center;
+				padding: 1.5rem;
+				border-radius: 0.25rem;
+			}
+		}
+	}
+}
+
+.accomplish__content{
+	.container{
+		.accomplish__wrapper{
+			.accomplish__text{
+				
 			}
 		}
 	}
