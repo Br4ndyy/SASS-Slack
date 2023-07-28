@@ -17,9 +17,11 @@
             width: 100%;
             height: 100%;
             position: fixed;
+            top: auto;
+            left:0;
+            right: 0;
+            bottom: 0;
             background-color: $clr-light;
-            top: 0;
-            left: 0;
             z-index: 999;
             &.active{
                 display: block;
@@ -29,6 +31,16 @@
                 background:transparent;
                 border: 0 solid transparent;
                 font-size: 2.5rem;
+                cursor: pointer;
+            }
+        }
+        @include mediaQuery($break-lg){
+            .modal{
+                border: 1px solid black;
+                max-width: 72rem;
+                height: auto;
+                margin: 0 auto;
+                bottom: 15rem;
             }
         }
     }
