@@ -26,6 +26,7 @@ window.addEventListener("scroll", () => {
 const modal = document.querySelector('.modal');
 const btnRegion = document.querySelector('.region');
 const btnClose = document.querySelector('#closeModal');
+const overlay = document.querySelector('#overlay');
 
 const openModalHandler = () => {
   btnRegion.classList.toggle('active');
@@ -36,6 +37,7 @@ const openModalHandler = () => {
 const closeModalHandler = () => {
   modal.classList.toggle('active');
   btnRegion.classList.toggle('active');
+  overlay.classList.toggle('active');
 }
 
 const closeModalOnFocusOut = (event) => {
@@ -43,6 +45,8 @@ const closeModalOnFocusOut = (event) => {
     closeModalHandler();
   }
 }
+
+console.log(overlay);
 
 btnClose.addEventListener('click', closeModalHandler);
 btnRegion.addEventListener('click', openModalHandler);
