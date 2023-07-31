@@ -47,10 +47,6 @@
                 width: 60%;
             }
             .countries{
-                display: grid;
-                grid-template-columns: 1fr;
-                line-height: .1rem;
-                gap: 2rem;
                 margin-top:2rem;
                 padding: 0 5rem;
                 ul{
@@ -72,6 +68,20 @@
                 height: auto;
                 margin: 0 auto;
                 bottom: 15rem;
+                h2{
+                    text-align: left;
+                    margin-left: 5rem;
+                }
+                p{
+                    width: auto;
+                    text-align: left;
+                    margin-left: 5rem;
+                }
+                .countries{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+
+                }
             }
         }
     }

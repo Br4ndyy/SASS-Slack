@@ -5,7 +5,7 @@ toggleMenu.addEventListener("click", () => {
   headerNav.classList.toggle("open");
 });
 
-const drop = document.querySelectorAll(".header__nav ul.nav li");
+const drop = document.querySelectorAll("ul.nav li");
 drop.forEach((link) => {
     link.addEventListener("click", () => {
         link.nextElementSibling.classList.toggle("open");
@@ -29,25 +29,30 @@ const btnClose = document.querySelector('#closeModal');
 const overlay = document.querySelector('#overlay');
 
 const openModalHandler = () => {
-  btnRegion.classList.toggle('active');
-  btnRegion.nextElementSibling.classList.toggle('active');
-  modal.classList.toggle('active');
+    btnRegion.classList.toggle('active');
+    modal.classList.toggle('active');
+    overlay.classList.toggle('active');
 }
 
 const closeModalHandler = () => {
-  modal.classList.toggle('active');
-  btnRegion.classList.toggle('active');
-  overlay.classList.toggle('active');
+    modal.classList.toggle('active');
+    btnRegion.classList.toggle('active');
+    overlay.classList.toggle('active');
 }
 
-const closeModalOnFocusOut = (event) => {
-  if (!modal.contains(event.target)) {
-    closeModalHandler();
-  }
-}
-
-console.log(overlay);
+var slider = tns({
+    container: '.slider',
+    items: 1,
+    slideBy:'page',
+    autoplay:true,
+    mouseDrag: true,
+    navPosition:"bottom",
+    responsive: {
+        900:{
+            items:4
+        }
+    }
+})
 
 btnClose.addEventListener('click', closeModalHandler);
 btnRegion.addEventListener('click', openModalHandler);
-window.addEventListener('click', closeModalOnFocusOut);

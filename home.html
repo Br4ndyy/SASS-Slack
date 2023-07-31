@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slack - Home</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.css">   
     <script src="https://kit.fontawesome.com/3ae6254126.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 </head>
 
 <body>
@@ -183,9 +184,9 @@
                 <div class="accomplish__text">
                     <img src="./dist/img/vector11.svg" alt="">
                     <div class="row1">
-                        <ul>
-                            <li><a href="">WHY SLACK?</a></li>
-                            <ul>
+                        <ul class="nav">
+                            <li><a href="javascript:void(0)">WHY SLACK? <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <ul class="drop">
                                 <li><a href="">Slack vs. Email</a></li>
                                 <li><a href="">Channels</a></li>
                                 <li><a href="">Engagement</a></li>
@@ -193,42 +194,107 @@
                                 <li><a href="">Watch the Demo</a></li>
                             </ul>
                         </ul>
-                        <ul>
-                            <li><a href="">PRODUCT</a></li>
-                            <ul>
-                                <li><a href="">Slack vs. Email</a></li>
-                                <li><a href="">Channels</a></li>
-                                <li><a href="">Engagement</a></li>
-                                <li><a href="">Scale</a></li>
-                                <li><a href="">Watch the Demo</a></li>
+                        <ul class="nav">
+                            <li><a href="javascript:void(0)">PRODUCT <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <ul class="drop">
+                                <li><a href="">Features</a></li>
+                                <li><a href="">Integrations</a></li>
+                                <li><a href="">Enterprise</a></li>
+                                <li><a href="">Solutions</a></li>
                             </ul>
                         </ul>
-                        <ul>
-                            <li><a href="">WHY SLACK?</a></li>
-                            <ul>
-                                <li><a href="">Slack vs. Email</a></li>
-                                <li><a href="">Channels</a></li>
-                                <li><a href="">Engagement</a></li>
-                                <li><a href="">Scale</a></li>
-                                <li><a href="">Watch the Demo</a></li>
+                        <ul class="nav">
+                            <li><a href="javascript:void(0)">PRICING <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <ul class="drop">
+                                <li><a href="">Plans</a></li>
+                                <li><a href="">Paid vs. Free</a></li>
                             </ul>
                         </ul>
-                        <ul>
-                            <li>PRODUCT</li>
-                            <ul>
-                                <li>Features</li>
-                                <li>Integrations</li>
-                                <li>Enterprise</li>
-                                <li>Solutions</li>
+                    
+                        <ul class="nav">
+                            <li><a href="javascript:void(0)">RESOURCES <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <ul class="drop">
+                                <li><a href="">Partners</a></li>
+                                <li><a href="">Developers</a></li>
+                                <li><a href="">Community</a></li>
+                                <li><a href="">Apps</a></li>
+                                <li><a href="">Blog</a></li>
+                                <li><a href="">Help Center</a></li>
+                                <li><a href="">Events</a></li>
                             </ul>
                         </ul>
-                        <ul>
-                            <li>PRICING</li>
-                            <ul>
-                                <li>Plans</li>
-                                <li>Paid vs. Free</li>
+                        <ul class="nav">
+                            <li><a href="javascript:void(0)">COMPANY <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <ul class="drop">
+                                <li><a href="">About Us</a></li>
+                                <li><a href="">Leadership</a></li>
+                                <li><a href="">News</a></li>
+                                <li><a href="">Media Kit</a></li>
+                                <li><a href="">Careers</a></li>
                             </ul>
                         </ul>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="work">
+        <div class="container">
+            <div class="work__wrapper">
+                <h3>Take a deeper dive into a new way to work</h3>
+                <div class="slider">
+                    <div class="card">
+                        <div class="slider__item">
+                            <img src="./dist/img/promo-state-of-work.jpg" alt="">
+                            <div class="slider__content">
+                                <h5>Report</h5>
+                                <h3>The State of Work 2023</h3>
+                                <div class="slider__actions">
+                                    <a href="">READ MORE</a>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="slider__item">
+                            <img src="./dist/img/wtny-resource-tile.jpg" alt="">
+                            <div class="slider__content">
+                                <h5>On-Demand</h5>
+                                <h3>Big Things are launching. Relive the highlights of World Tour New York!</h3>
+                                <div class="slider__actions">
+                                    <a href="">WATCH NOW</a>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="slider__item">
+                            <img src="./dist/img/promo-open-ai.jpg" alt="">
+                            <div class="slider__content">
+                                <h5>Customer Story</h5>
+                                <h3>The next big thing? AI for everyone</h3>
+                                <div class="slider__actions">
+                                    <a href="">READ MORE</a>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="slider__item">
+                            <img src="./dist/img/promo-boost-productivity2x.jpg" alt="">
+                            <div class="slider__content">
+                                <h5>Webinar</h5>
+                                <h3>Top Slack tips to boost productivity</h3>
+                                <div class="slider__actions">
+                                    <a href="">WATCH NOW</a>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -248,7 +314,7 @@
                         <li><a href="#">Contact Us</a></li>
                         <li>
                             <a href="javascript:void(0)" class="region">Change Region</a>
-                            <div class="modal" onfocusout="closeModalHandler">
+                            <div class="modal">
                                 <button id="closeModal">x</button>
                                 <h2>Change region</h2>
                                 <p>Selecting a different region will change the language and content of slack.com.</p>
@@ -275,7 +341,6 @@
                                         <li><a href="">日本 (日本語)</a></li>
                                         <li><a href="">대한민국 (한국어)</a></li>
                                     </ul>
-
                                 </div>
                             </div>
                         </li>
@@ -287,6 +352,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="./dist/javascript/javascript.js"></script>
 
     
