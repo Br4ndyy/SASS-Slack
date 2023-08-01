@@ -1,5 +1,19 @@
 .footer{
+    transform: translateY(-8rem);
+    p{
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
+    &__right{
+        display: flex;
+        gap: 3rem;
+        font-size: 2.5rem;
+        a{
+            color: $clr-dark;
+        }
+    }
     &__left{
+        margin-bottom: 3rem;
         ul{
             li{
                 font-size: 1.5rem;
@@ -7,6 +21,11 @@
                 font-weight: bold;
                 a{
                     color: $clr-dark;
+                }
+                &:last-child{
+                    a{
+                        color: $clr-lblue;
+                    }
                 }
             }
         }
@@ -82,6 +101,38 @@
                     grid-template-columns: 1fr 1fr 1fr;
 
                 }
+            }
+        }
+    }
+    @include mediaQuery($break-lg){
+        transform: translateY(-20rem);
+        p{
+            text-align: center;
+        }
+        &__wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__left{
+                margin: 0;
+            ul{
+                display: flex;
+                gap:3rem;
+                li{
+                    a{
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+        &__right{
+            a{
+                font-size: 3rem;
+            }
+            a:hover{
+                color: $clr-lblue;
             }
         }
     }
